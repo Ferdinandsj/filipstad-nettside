@@ -1,10 +1,79 @@
+@import url('https://use.typekit.net/fpp1wmd.css');
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-bottom: 5vh;
+  font-weight: 400;
+}
+
+.h1 {
+  font-family: 'fpp1wmd', serif;
+  font-size: 64px;
+  font-weight: 500;
+  font-style: medium;
+}
+
+.sponsorsSection {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  color: rgb(64, 64, 64);
+  margin: 0 10vw;
+}
+.sponsorList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+.sponsors {
+  font-weight: 400;
+}
+
+.b {
+  font-weight: 600;
+}
+
+.listDiv {
+  display: flex;
+  gap: 16px;
+}
+
+.subTitle {
+  font-weight: 500;
+  color: #353535;
+}
+
 .main {
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  min-height: 100vh;
+  min-height: 30vh;
+}
+
+.downloadBtn {
+  background: #769d76;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.bgImg {
+  position: absolute;
+  top: 10vh;
+  width: 130vw;
+  object-fit: scale-down;
+  z-index: -1;
 }
 
 .description {
@@ -98,7 +167,7 @@
 
 .center::before,
 .center::after {
-  content: "";
+  content: '';
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -200,6 +269,58 @@
       rgb(var(--background-end-rgb)) 40%
     );
     z-index: 1;
+  }
+}
+
+@media (max-width: 1300px) {
+  .sponsorsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    color: rgb(64, 64, 64);
+    margin: 0 10vw;
+  }
+  .sponsorList {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+  }
+
+  .listDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .main {
+    gap: 32px;
+    text-align: center;
+    margin-top: 0vh;
+  }
+
+  .bgImg {
+    position: absolute;
+    top: 30vh;
+    width: 130vw;
+    height: 60vh;
+    object-fit: scale-down;
+    z-index: -1;
+  }
+
+  .b {
+    width: 180px;
+  }
+
+  .wrapper {
+    min-height: 110vh;
+  }
+}
+
+@media ((max-height: 900px)) {
+  .wrapper {
+    min-height: 135vh;
   }
 }
 

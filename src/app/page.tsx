@@ -1,95 +1,53 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import styles from './page.module.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.wrapper}>
+      <main className={styles.main}>
+        <div className={styles.titleContainer}>
+          <h2 className={styles.subTitle}>Prosjekt Filipstad</h2>
+          <h1 className={styles.h1}>Estetisk veileder</h1>
+        </div>
+        <Link
+          className={styles.downloadBtn}
+          href="https://www.dropbox.com/sh/tmix7kmjqbep51c/AABRyh434fDUuI25iyisQKvJa/Estetisk%20veileder?dl=0&preview=Filipstad+-+et+forslag+til+estetisk+veileder.pdf&subfolder_nav_tracking=1"
+        >
+          Last ned veilederen
+        </Link>
+        <Image
+          className={styles.bgImg}
+          src="/Forsidebilde.webp"
+          width={1000}
+          height={1000}
+          alt="Forsidebilde"
+          quality={100}
+        />
+      </main>
+      <div className={styles.sponsorsSection}>
+        <h3 className={styles.sponsors}>En stor takk til</h3>
+
+        <div className={styles.sponsorList}>
+          <div className={styles.listDiv}>
+            <b className={styles.b}>Veilederne</b>
+            <p>
+              Sanna Maria Härmä, Kristine Holte, Kurt Singstad, Juni Norløv
+              Teigene, Dagny Thurmann-Moe
+            </p>
+          </div>
+
+          <div className={styles.listDiv}>
+            <b className={styles.b}>Linjeforeningene</b>
+            <p>Broderskabet, Terra Forma, Leonardo & Struktura</p>
+          </div>
+
+          <div className={styles.listDiv}>
+            <b className={styles.b}>Sponsorene</b>
+            <p>Sto, Asak Miljøstein & Wieneberger</p>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
