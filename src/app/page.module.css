@@ -64,8 +64,15 @@
 .downloadBtn {
   background: #769d76;
   color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 16px 24px;
+  border-radius: 12px;
+}
+
+.downloadBtn:hover {
+  background: #9abc9a;
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 12px;
 }
 
 .bgImg {
